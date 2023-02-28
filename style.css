@@ -1,9 +1,9 @@
-
 header{
     background-color: #5889a1;
     padding: 15px 20px;
     display: flex;
-    align-items: center; 
+    align-items: center;
+     overflow: hidden;
 }
 .header ul
 {
@@ -31,6 +31,7 @@ header{
     flex: 1;
     justify-content: flex-end;
     gap: 10px;
+    cursor: pointer;
 }
 .headersearch{
     flex-direction: row;
@@ -40,6 +41,8 @@ header{
     flex: 10;
     justify-content: flex-end;
     align-items: center; 
+    
+    min-width: 190px;
 }
 .headersearch input{
    border:none;
@@ -65,6 +68,7 @@ header{
 body{
     background-color: #EDE7D9;
 }
+
 .cardHead{
     text-align: center;
     display: flex;
@@ -109,12 +113,13 @@ body{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    bottom: 5%;
+    top: 500px;
     left: 15%;
     color:#fff;
     font-family: 'Palanquin Dark', sans-serif;
     font-size: 25px;
 }
+
 
 .subCata {
     display: flex;
@@ -122,12 +127,12 @@ body{
     flex-wrap: nowrap;
     margin-left: 70px;
     margin-right: 70px;
-    
+    overflow: hidden;
    
 }
 .Catagories
 {
-    
+       
      flex: 0 1 10%;
     background-color: #fff;
     margin-bottom: 20px;
@@ -135,6 +140,10 @@ body{
     flex: 0 1 auto;
     background-color: #EDE7D9;
     object-fit: cover; 
+    cursor: pointer;
+}
+.Catagories:hover{
+    text-decoration: underline;
 }
 .Catagories img{
     height: 10rem;
@@ -142,8 +151,13 @@ body{
     object-fit: cover;
     text-align: center;
     border-radius: 15px;
-    cursor: pointer;
-    
+   
+    box-shadow: 
+  0 1px 1px hsla(0, 0%, 22%, 0.075),
+  0 2px 2px hsla(0, 0%, 22%, 0.075),
+  0 4px 4px hsla(0, 0%, 22%, 0.075),
+  0 8px 8px hsla(0, 0%, 22%, 0.075),
+  0 16px 16px hsla(0, 0%, 22%, 0.075);
 }
 .Catagories p{
 
@@ -162,14 +176,14 @@ body{
 }
 .inhouse{
     display: flex;
-    justify-content:space-between;
-   
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-left: 70px;
     margin-right: 70px;
 }
 .brand{
     display: flex;
+    
     background-color: #fff;
     margin-bottom: 20px;
     padding: .4rem;
@@ -185,6 +199,12 @@ body{
     object-fit: cover;
     border-radius: 15px;
     display: block;
+    box-shadow: 
+  0 1px 1px hsla(0, 0%, 22%, 0.075),
+  0 2px 2px hsla(0, 0%, 22%, 0.075),
+  0 4px 4px hsla(0, 0%, 22%, 0.075),
+  0 8px 8px hsla(0, 0%, 22%, 0.075),
+  0 16px 16px hsla(0, 0%, 22%, 0.075);
 }
 .brand1Title{
     position: absolute;
@@ -260,7 +280,7 @@ body{
     flex: 0 1 10%;
     background-color: #fff;
     margin-bottom: 20px;
-    
+    cursor: pointer;
     box-shadow: 
       0 1px 1px hsla(0, 0%, 22%, 0.075),
       0 2px 2px hsla(0, 0%, 22%, 0.075),
@@ -309,6 +329,9 @@ body{
     margin: 10px;
     
 }
+.companies li:hover{
+    background-color: #ad965e;
+}
 .btnbrand{
    
     text-align: center;
@@ -354,7 +377,7 @@ input[type=text], select, textarea {
     margin-bottom: 10px; 
     resize: vertical;
     font-family: 'Be Vietnam Pro', sans-serif;
-  }
+}
   
   input[type=submit] {
     background-color: #DCC797;
@@ -372,6 +395,7 @@ input[type=text], select, textarea {
   }
   .footer{
     background-color: #97B6B8;
+    overflow: hidden;
   }
   .footerlists{
     font-family: 'Be Vietnam Pro', sans-serif;
@@ -384,11 +408,85 @@ input[type=text], select, textarea {
     display: flex;
     font-family: 'Be Vietnam Pro', sans-serif;
     background-color: #5889a1;
-    padding-left: 10px;
+    padding-left: px;
     gap: 60px;
+    white-space:nowrap;
   }
   .media img{
     width: 400px;
     padding: 10px;
+    cursor: pointer;
+  }
+  .logoFooter{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    padding: 10px;
+    
+  }
+
+.sustain{
+    margin-top: 50px;
+    margin: 50px;
+    
+
+   
+}
+  .gridSus{
+    
+    justify-content: center;
+    display: grid;
+    overflow: hidden;
+    position: static;
+     overflow-block: hidden;
+    gap: 50px;
+    grid-template-columns: 150px 450px 150px; 
+    grid-template-rows: 150px 150px;
+  }
+  .susSmall{
+    
+    background-color: #97B6B8;
+    border-radius: 15px;
+  }
+  .susSmall p{
+    text-align: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 18px;
+  }
+  .susSmall img{
+    margin-top: 8px;
+   margin-inline: 42px;
+   margin-bottom: -10px;
+  }
+  .mainSus{
+
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: #97B6B8;
+    border-radius: 15px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    text-align: center;
 
   }
+  .mainSus img{
+    width: 160px;
+    margin-bottom: -30px;
+  }
+  #susmore{
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color:#DCC797;
+    border: none;
+    border-radius: 15px;
+    font-size: large;
+    height: 40px;
+    width: 120px;
+}
+#susmore:hover{background-color:#ad965e; cursor: pointer;}
+.btnSus{
+   margin: 20px;
+    text-align: center;
+}
+
